@@ -42,7 +42,7 @@ print("\n")
 
 # GPA FOR SECOND SEMESTER
 print("SECOND SEMESTER")
-numUnits2 = [5.0, 4.0, 3.0, 2.0, 1.0, 0.0]
+numUnits2 = numUnits.copy()
 qualityPoints2 = []
 summation2 = 0
 totalUnits2 = 0
