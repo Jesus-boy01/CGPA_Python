@@ -28,6 +28,7 @@ for num in range(0, 5):
         qualityPoints.append(numUnits[5] * unitOfCourse)
     else:
         print("Invalid Grade Entered")
+        break
 
     totalUnits = totalUnits + unitOfCourse
 
@@ -36,7 +37,7 @@ for i in qualityPoints:
 
 gpa = summation / totalUnits
 
-print(gpa)
+print(f"Your semester's gpa is {gpa}")
 
 print("\n")
 
@@ -74,7 +75,7 @@ for i in qualityPoints2:
 
 gpa2 = summation2 / totalUnits2
 
-print(gpa2)
+print(f"Your semester's gpa is {gpa2}")
 
 cTotalUnits = totalUnits + totalUnits2
 cQualityPoints = qualityPoints + qualityPoints2
