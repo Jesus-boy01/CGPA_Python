@@ -36,13 +36,13 @@ for i in qualityPoints:
 
 gpa = summation / totalUnits
 
-print(gpa)
+print(f"Your semester's gpa is {gpa}")
 
 print("\n")
 
 # GPA FOR SECOND SEMESTER
 print("SECOND SEMESTER")
-numUnits2 = [5.0, 4.0, 3.0, 2.0, 1.0, 0.0]
+numUnits2 = numUnits.copy()
 qualityPoints2 = []
 summation2 = 0
 totalUnits2 = 0
@@ -74,7 +74,7 @@ for i in qualityPoints2:
 
 gpa2 = summation2 / totalUnits2
 
-print(gpa2)
+print(f"Your semester's gpa is {gpa}")
 
 cTotalUnits = totalUnits + totalUnits2
 cQualityPoints = qualityPoints + qualityPoints2
