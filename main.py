@@ -67,6 +67,7 @@ for num2 in range(0, 7):
         qualityPoints2.append(numUnits2[5] * unitOfCourse2)
     else:
         print("Invalid Grade Entered")
+        break
 
     totalUnits2 = totalUnits2 + unitOfCourse2
 
