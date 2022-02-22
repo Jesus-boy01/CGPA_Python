@@ -11,7 +11,7 @@ cSummation = 0
 cTotalUnits = 0
 cGpa = 0
 
-getNumberOfCourse = eval(input("How many courses are you offering: "))
+getNumberOfCourse = eval(input("How many courses are you offering for first semester: "))
 if getNumberOfCourse in numOfCourses:
     for num in range(0, getNumberOfCourse):
         grade = int(input("Enter your grade: "))
@@ -53,7 +53,7 @@ summation2 = 0
 totalUnits2 = 0
 gpa2 = 0
 
-getNumberOfCourse2 = eval(input("How many courses are you offering: "))
+getNumberOfCourse2 = eval(input("How many courses are you offering for second semester: "))
 if getNumberOfCourse2 in numOfCourses2:
     for num2 in range(0, getNumberOfCourse2):
         grade2 = int(input("Enter your grade: "))
