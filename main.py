@@ -15,14 +15,14 @@ cGpa = 0
 
 getStudentsSemester = eval(input("Enter the number of semesters completed: "))
 if getStudentsSemester not in totalNumOfSemesters:
-    raise Exception("Sorry, Invalid Input")
+    raise Exception("Sorry, The value is greater than the maximum number of semesters that can be chosen")
 
 # program to obtain the number of courses offered by the user and to check to see that the input is valid
 
 for semesterCompleted in range(0, getStudentsSemester):
     getNumberOfCourse = eval(input("How many courses are you offering for this semester: "))
     if getNumberOfCourse not in numOfCourses:
-        raise Exception("Sorry, Invalid Input")
+        raise Exception("Sorry, The value is greater than the maximum number of courses that can be chosen")
 
 # program to calculate the total quality points and total units
 
@@ -50,7 +50,7 @@ for semesterCompleted in range(0, getStudentsSemester):
             totalUnits = totalUnits + unitOfCourse
 
             if totalUnits == 0:
-                raise Exception("Sorry, you cannot have 0 units in a course")
+                raise Exception("Sorry, a course cannot have 0 units")
 
 # program to calculate one semester gpa
 
