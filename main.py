@@ -67,10 +67,8 @@ for semesterCompleted in range(0, getStudentsSemester):
 
 if getStudentsSemester > 1:
     cTotalUnits += totalUnits
-    print(cTotalUnits)
     for i in qualityPoints:
         cSummation += i
-    print(cSummation)
     cGpa = cSummation / cTotalUnits
 
     try:
