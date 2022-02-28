@@ -15,14 +15,14 @@ cGpa = 0
 
 getStudentsSemester = eval(input("Enter the number of semesters completed: "))
 if getStudentsSemester not in totalNumOfSemesters:
-    raise Exception("Sorry, The value is greater than the maximum number of semesters that can be chosen")
+    raise Exception("Sorry, Invalid value or value greater than the maximum number of semesters that can be chosen")
 
 # program to obtain the number of courses offered by the user and to check to see that the input is valid
 
 for semesterCompleted in range(0, getStudentsSemester):
     getNumberOfCourse = eval(input("How many courses are you offering for this semester: "))
     if getNumberOfCourse not in numOfCourses:
-        raise Exception("Sorry, The value is greater than the maximum number of courses that can be chosen")
+        raise Exception("Sorry, Invalid value or value greater than the maximum number of courses that can be chosen")
 
 # program to calculate the total quality points and total units
 
@@ -30,6 +30,9 @@ for semesterCompleted in range(0, getStudentsSemester):
         for num in range(0, getNumberOfCourse):
             grade = int(input("Enter your score: "))
             unitOfCourse = int(input("Enter the unit of this course: "))
+
+            if unitOfCourse == 0:
+                raise Exception("Sorry a course cannot be 0 units")
 
             if 70 <= grade <= 100:
                 qualityPoints.append(numUnits[0] * unitOfCourse)
@@ -50,7 +53,7 @@ for semesterCompleted in range(0, getStudentsSemester):
             totalUnits = totalUnits + unitOfCourse
 
             if totalUnits == 0:
-                raise Exception("Sorry, a course cannot have 0 units")
+                raise Exception("Sorry, the total units of your courses cannot be equal to 0")
 
 # program to calculate one semester gpa
 
@@ -71,6 +74,7 @@ if getStudentsSemester > 1:
         cSummation += i
     cGpa = cSummation / cTotalUnits
 
+# program to catch division by 0 error
     try:
         print(f"Your semester's gpa is {gpa}")
     except ZeroDivisionError:
