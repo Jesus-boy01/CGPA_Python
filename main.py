@@ -1,7 +1,7 @@
 # Initialization of variables
 numUnits = [5.0, 4.0, 3.0, 2.0, 1.0, 0.0]
-numOfCourses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-totalNumOfSemesters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+numOfCourses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+totalNumOfSemesters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 qualityPoints = []
 summation = 0
 totalUnits = 0
