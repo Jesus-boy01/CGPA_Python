@@ -1,7 +1,7 @@
 # Initialization of variables
 numUnits = [5.0, 4.0, 3.0, 2.0, 1.0, 0.0]
 numOfCourses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-totalNumOfSemesters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+totalNumOfSemesters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 qualityPoints = []
 summation = 0
 totalUnits = 0
@@ -20,6 +20,7 @@ if getStudentsSemester not in totalNumOfSemesters:
 # program to obtain the number of courses offered by the user and to check to see that the input is valid
 
 for semesterCompleted in range(0, getStudentsSemester):
+    print("N.B Maximum number of courses is 13")
     getNumberOfCourse = eval(input("How many courses are you offering for this semester: "))
     if getNumberOfCourse not in numOfCourses:
         raise Exception("Sorry, Invalid value or value greater than the maximum number of courses that can be chosen")
@@ -75,6 +76,6 @@ if getStudentsSemester > 1:
     try:
         print(f"Your semester's gpa is {gpa}")
     except ZeroDivisionError:
-        print("Sorry, you can't divide by 0")
+        print("Sorry, your total units cannot be equal to 0")
 
     print(f"Your CGPA is {cGpa}")
