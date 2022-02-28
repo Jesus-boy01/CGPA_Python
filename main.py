@@ -52,9 +52,6 @@ for semesterCompleted in range(0, getStudentsSemester):
 
             totalUnits = totalUnits + unitOfCourse
 
-            if totalUnits == 0:
-                raise Exception("Sorry, the total units of your courses cannot be equal to 0")
-
 # program to calculate one semester gpa
 
     if getStudentsSemester == 1:
