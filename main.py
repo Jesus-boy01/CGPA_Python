@@ -72,6 +72,4 @@ if getStudentsSemester > 1:
         cSummation += i
     cGpa = cSummation / cTotalUnits
 
-# program to catch division by 0 error
-
     print(f"Your CGPA is {cGpa}")
