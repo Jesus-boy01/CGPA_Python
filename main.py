@@ -73,9 +73,5 @@ if getStudentsSemester > 1:
     cGpa = cSummation / cTotalUnits
 
 # program to catch division by 0 error
-    try:
-        print(f"Your semester's gpa is {gpa}")
-    except ZeroDivisionError:
-        print("Sorry, your total units cannot be equal to 0")
 
     print(f"Your CGPA is {cGpa}")
