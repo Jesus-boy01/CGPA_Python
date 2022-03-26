@@ -1,6 +1,5 @@
 # Initialization of variables
 numUnits = [5.0, 4.0, 3.0, 2.0, 1.0, 0.0]
-numOfCourses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 totalNumOfSemesters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 qualityPoints = []
 summation = 0
@@ -17,41 +16,36 @@ getStudentsSemester = eval(input("Enter the number of semesters completed: "))
 if getStudentsSemester not in totalNumOfSemesters:
     raise Exception("Sorry, Invalid value or value greater than the maximum number of semesters that can be chosen")
 
-# program to obtain the number of courses offered by the user and to check to see that the input is valid
-
 for semesterCompleted in range(0, getStudentsSemester):
-    print("N.B Maximum number of courses is 13")
-    getNumberOfCourse = eval(input("How many courses are you offering for this semester: "))
-    if getNumberOfCourse not in numOfCourses:
-        raise Exception("Sorry, Invalid value or value greater than the maximum number of courses that can be chosen")
+    getNextScore = input("Do you want to input a score(Y or N): ").upper()
 
-# program to calculate the total quality points and total units
+# program to obtain scores of the user based on if the user chooses to input more courses
 
-    if getNumberOfCourse in numOfCourses:
-        for num in range(0, getNumberOfCourse):
-            grade = int(input("Enter your score: "))
-            unitOfCourse = int(input("Enter the unit of this course: "))
+    while getNextScore == "Y":
+        score = eval(input("Enter your score: "))
+        unitOfCourse = int(input("Enter the unit of this course: "))
+        if unitOfCourse == 0:
+            raise Exception("Sorry a course cannot be 0 units")
 
-            if unitOfCourse == 0:
-                raise Exception("Sorry a course cannot be 0 units")
+        getNextScore = input("Do you want to input another score(Y or N): ").upper()
 
-            if 70 <= grade <= 100:
-                qualityPoints.append(numUnits[0] * unitOfCourse)
-            elif 60 <= grade < 70:
-                qualityPoints.append(numUnits[1] * unitOfCourse)
-            elif 50 <= grade < 60:
-                qualityPoints.append(numUnits[2] * unitOfCourse)
-            elif 45 <= grade < 50:
-                qualityPoints.append(numUnits[3] * unitOfCourse)
-            elif 40 <= grade < 45:
-                qualityPoints.append(numUnits[4] * unitOfCourse)
-            elif 0 <= grade < 40:
-                qualityPoints.append(numUnits[5] * unitOfCourse)
-            else:
-                print("Invalid Grade Entered")
-                break
+        if 70 <= score <= 100:
+            qualityPoints.append(numUnits[0] * unitOfCourse)
+        elif 60 <= score < 70:
+            qualityPoints.append(numUnits[1] * unitOfCourse)
+        elif 50 <= score < 60:
+            qualityPoints.append(numUnits[2] * unitOfCourse)
+        elif 45 <= score < 50:
+            qualityPoints.append(numUnits[3] * unitOfCourse)
+        elif 40 <= score < 45:
+            qualityPoints.append(numUnits[4] * unitOfCourse)
+        elif 0 <= score < 40:
+            qualityPoints.append(numUnits[5] * unitOfCourse)
+        else:
+            print("Invalid Grade Entered")
+            break
 
-            totalUnits = totalUnits + unitOfCourse
+        totalUnits = totalUnits + unitOfCourse
 
 # program to calculate one semester gpa
 
