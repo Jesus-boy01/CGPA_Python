@@ -10,16 +10,21 @@ cSummation = 0
 cTotalUnits = 0
 cGpa = 0
 
-# program to get the number of semesters completed by the user and check to see that the input is valid
+# program section to get the number of semesters completed by the user and check to see that the input is valid
 
 getStudentsSemester = eval(input("Enter the number of semesters completed: "))
 if getStudentsSemester not in totalNumOfSemesters:
     raise Exception("Sorry, Invalid value or value greater than the maximum number of semesters that can be chosen")
 
+# program section to get whether the user wants to input a score
+
 for semesterCompleted in range(0, getStudentsSemester):
     getNextScore = input("Do you want to input a score(Y or N): ").upper()
+    if getNextScore == "N":
+        print("Sorry. There is no GPA or CGPA to be obtained")
+        break
 
-# program to obtain scores of the user based on if the user chooses to input more courses
+# program section to obtain scores of the user based on if the user chooses to input more courses
 
     while getNextScore == "Y":
         score = eval(input("Enter your score: "))
@@ -47,7 +52,7 @@ for semesterCompleted in range(0, getStudentsSemester):
 
         totalUnits = totalUnits + unitOfCourse
 
-# program to calculate one semester gpa
+# program section to calculate one semester gpa
 
     if getStudentsSemester == 1:
         for i in qualityPoints:
@@ -58,7 +63,7 @@ for semesterCompleted in range(0, getStudentsSemester):
 
     print("\n")
 
-# program to calculate the cgpa based on the number of semesters obtained from the user
+# program section to calculate the cgpa based on the number of semesters obtained from the user
 
 if getStudentsSemester > 1:
     cTotalUnits += totalUnits
